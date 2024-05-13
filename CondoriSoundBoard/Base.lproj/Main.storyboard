@@ -129,9 +129,6 @@
                         <slider key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="X8r-hZ-Slx">
                             <rect key="frame" x="76.333333333333329" y="5" width="240.66666666666669" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <action selector="volumen:" destination="sWy-KN-FRu" eventType="valueChanged" id="exn-0d-0wy"/>
-                            </connections>
                         </slider>
                     </navigationItem>
                     <connections>
@@ -140,6 +137,7 @@
                         <outlet property="lblduracion" destination="h5I-pX-PGn" id="R2K-tg-vBz"/>
                         <outlet property="nombreTextField" destination="uHa-Vo-zBa" id="EbZ-6L-IIj"/>
                         <outlet property="reproducirButton" destination="bLD-cC-hm4" id="Z89-iR-t8f"/>
+                        <outlet property="volumen" destination="X8r-hZ-Slx" id="GJy-jf-DPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbe-v6-791" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

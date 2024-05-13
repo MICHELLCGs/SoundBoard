@@ -16,7 +16,7 @@ class SoundViewController: UIViewController {
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var agregarButton: UIButton!
     @IBOutlet weak var lblduracion: UILabel!
-    
+    @IBOutlet weak var volumen: UISlider!
    
     
     
@@ -34,9 +34,10 @@ class SoundViewController: UIViewController {
         agregarButton.isEnabled = false
         
         volumen.minimumValue = 0.0
-        volumen.maximumValue = 1.0
-        volumen.value = reproducirAudio?.volume ?? 0.5
-    }
+            volumen.maximumValue = 1.0
+            volumen.value = Float(reproducirAudio?.volume ?? 0.5)  
+            
+            volumen.addTarget(self, action: #selector(volumenCambiado(_:)), for: .valueChanged)    }
     
     @IBAction func grabarTapped(_ sender: Any) {
         if grabarAudio!.isRecording {
@@ -77,10 +78,8 @@ class SoundViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
-    @IBAction func volumen(_ sender: Any) {
-        if let slider = sender as? UISlider {
-                reproducirAudio?.volume = slider.value
-            }
+    @objc func volumenCambiado(_ sender: UISlider) {
+        reproducirAudio?.volume = sender.value
     }
     
     
