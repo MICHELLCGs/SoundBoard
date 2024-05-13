@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Grabacion" representedClassName="Grabacion" syncable="YES" codeGenerationType="class">
         <attribute name="audio" optional="YES" attributeType="Binary"/>
+        <attribute name="duracion" optional="YES" attributeType="String"/>
         <attribute name="nombre" optional="YES" attributeType="String"/>
     </entity>
 </model>

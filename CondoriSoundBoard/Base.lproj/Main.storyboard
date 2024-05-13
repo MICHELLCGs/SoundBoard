@@ -72,19 +72,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcS-ez-BzQ">
-                                <rect key="frame" x="20" y="301" width="353" height="21"/>
+                                <rect key="frame" x="20" y="342" width="353" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Audio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-Vo-zBa">
-                                <rect key="frame" x="20" y="342" width="353" height="28.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgo-3l-W3S">
-                                <rect key="frame" x="154" y="390.66666666666669" width="85" height="35"/>
+                                <rect key="frame" x="154" y="431.66666666666669" width="85" height="35"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
@@ -93,30 +88,47 @@
                                     <action selector="agregarTapped:" destination="sWy-KN-FRu" eventType="touchUpInside" id="lLD-MT-lnY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5I-pX-PGn">
+                                <rect key="frame" x="60" y="291" width="273" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Audio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-Vo-zBa">
+                                <rect key="frame" x="20" y="383" width="353" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H1G-ps-Uhq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uHa-Vo-zBa" firstAttribute="leading" secondItem="H1G-ps-Uhq" secondAttribute="leading" constant="20" id="0O2-ph-z9F"/>
                             <constraint firstItem="WcS-ez-BzQ" firstAttribute="leading" secondItem="H1G-ps-Uhq" secondAttribute="leading" constant="20" id="1LS-ko-bLy"/>
+                            <constraint firstItem="WcS-ez-BzQ" firstAttribute="top" secondItem="h5I-pX-PGn" secondAttribute="bottom" constant="30" id="2sV-Nn-HIE"/>
                             <constraint firstItem="bLD-cC-hm4" firstAttribute="centerX" secondItem="WcS-ez-BzQ" secondAttribute="centerX" id="3pv-MO-Zsv"/>
-                            <constraint firstItem="uHa-Vo-zBa" firstAttribute="top" secondItem="WcS-ez-BzQ" secondAttribute="bottom" constant="20" id="6ah-vq-ktJ"/>
+                            <constraint firstItem="bLD-cC-hm4" firstAttribute="centerX" secondItem="h5I-pX-PGn" secondAttribute="centerX" id="8gi-IG-vom"/>
+                            <constraint firstItem="uHa-Vo-zBa" firstAttribute="top" secondItem="WcS-ez-BzQ" secondAttribute="bottom" constant="20" id="AIJ-7c-Rgj"/>
+                            <constraint firstItem="H1G-ps-Uhq" firstAttribute="trailing" secondItem="h5I-pX-PGn" secondAttribute="trailing" constant="60" id="O2Z-0d-nFB"/>
+                            <constraint firstItem="h5I-pX-PGn" firstAttribute="leading" secondItem="H1G-ps-Uhq" secondAttribute="leading" constant="60" id="QFf-Ac-a8f"/>
+                            <constraint firstItem="h5I-pX-PGn" firstAttribute="top" secondItem="bLD-cC-hm4" secondAttribute="bottom" constant="20" id="QkX-lg-ERJ"/>
                             <constraint firstItem="Wvz-A1-BN4" firstAttribute="top" secondItem="H1G-ps-Uhq" secondAttribute="top" constant="20" id="X7G-7L-U8F"/>
                             <constraint firstItem="Wvz-A1-BN4" firstAttribute="centerX" secondItem="ijr-dB-js0" secondAttribute="centerX" id="X7d-Kb-gTo"/>
                             <constraint firstItem="bLD-cC-hm4" firstAttribute="top" secondItem="Wvz-A1-BN4" secondAttribute="bottom" constant="20" id="ZvJ-0f-4Si"/>
                             <constraint firstItem="H1G-ps-Uhq" firstAttribute="trailing" secondItem="WcS-ez-BzQ" secondAttribute="trailing" constant="20" id="daB-Ic-zQr"/>
+                            <constraint firstItem="Jgo-3l-W3S" firstAttribute="top" secondItem="uHa-Vo-zBa" secondAttribute="bottom" constant="20" id="eVo-lL-ELF"/>
                             <constraint firstItem="uHa-Vo-zBa" firstAttribute="centerX" secondItem="Jgo-3l-W3S" secondAttribute="centerX" id="eWl-64-7BX"/>
                             <constraint firstItem="Wvz-A1-BN4" firstAttribute="centerX" secondItem="bLD-cC-hm4" secondAttribute="centerX" id="fhJ-JR-EUT"/>
-                            <constraint firstItem="Jgo-3l-W3S" firstAttribute="top" secondItem="uHa-Vo-zBa" secondAttribute="bottom" constant="20" id="hHd-qI-BeB"/>
-                            <constraint firstItem="WcS-ez-BzQ" firstAttribute="top" secondItem="bLD-cC-hm4" secondAttribute="bottom" constant="30" id="l1G-fU-kIs"/>
                             <constraint firstItem="H1G-ps-Uhq" firstAttribute="trailing" secondItem="uHa-Vo-zBa" secondAttribute="trailing" constant="20" id="t6j-y7-rp0"/>
                             <constraint firstItem="WcS-ez-BzQ" firstAttribute="centerX" secondItem="uHa-Vo-zBa" secondAttribute="centerX" id="vCX-7A-IUA"/>
+                            <constraint firstItem="h5I-pX-PGn" firstAttribute="centerX" secondItem="WcS-ez-BzQ" secondAttribute="centerX" id="xhj-HR-Wd3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="46W-jd-1DW"/>
                     <connections>
                         <outlet property="agregarButton" destination="Jgo-3l-W3S" id="DBk-HP-BjA"/>
                         <outlet property="grabarButton" destination="Wvz-A1-BN4" id="wmS-He-U04"/>
+                        <outlet property="lblduracion" destination="h5I-pX-PGn" id="R2K-tg-vBz"/>
                         <outlet property="nombreTextField" destination="uHa-Vo-zBa" id="EbZ-6L-IIj"/>
                         <outlet property="reproducirButton" destination="bLD-cC-hm4" id="Z89-iR-t8f"/>
                     </connections>
