@@ -17,6 +17,9 @@ class SoundViewController: UIViewController {
     @IBOutlet weak var agregarButton: UIButton!
     @IBOutlet weak var lblduracion: UILabel!
     
+   
+    
+    
     var grabarAudio: AVAudioRecorder?
     var reproducirAudio: AVAudioPlayer?
     var audioURL: URL?
@@ -29,6 +32,10 @@ class SoundViewController: UIViewController {
         configurarGrabacion()
         reproducirButton.isEnabled = false
         agregarButton.isEnabled = false
+        
+        volumen.minimumValue = 0.0
+        volumen.maximumValue = 1.0
+        volumen.value = reproducirAudio?.volume ?? 0.5
     }
     
     @IBAction func grabarTapped(_ sender: Any) {
@@ -70,6 +77,12 @@ class SoundViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
+    @IBAction func volumen(_ sender: Any) {
+        if let slider = sender as? UISlider {
+                reproducirAudio?.volume = slider.value
+            }
+    }
+    
     
     func configurarGrabacion() {
         do {

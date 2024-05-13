@@ -124,7 +124,16 @@
                             <constraint firstItem="h5I-pX-PGn" firstAttribute="centerX" secondItem="WcS-ez-BzQ" secondAttribute="centerX" id="xhj-HR-Wd3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="46W-jd-1DW"/>
+                    <navigationItem key="navigationItem" id="46W-jd-1DW">
+                        <nil key="title"/>
+                        <slider key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="X8r-hZ-Slx">
+                            <rect key="frame" x="76.333333333333329" y="5" width="240.66666666666669" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="volumen:" destination="sWy-KN-FRu" eventType="valueChanged" id="exn-0d-0wy"/>
+                            </connections>
+                        </slider>
+                    </navigationItem>
                     <connections>
                         <outlet property="agregarButton" destination="Jgo-3l-W3S" id="DBk-HP-BjA"/>
                         <outlet property="grabarButton" destination="Wvz-A1-BN4" id="wmS-He-U04"/>
